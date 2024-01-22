@@ -1,6 +1,6 @@
-package Hw1;
+package HW1;
 
-public class Practice {
+public class Practice_HW1 {
 
 	public static void main(String[] args) {
 		/* 請設計一隻Java程式，計算12，6這兩個數值的和與積 */

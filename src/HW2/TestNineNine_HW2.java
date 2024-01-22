@@ -1,4 +1,4 @@
-package Hw_2;
+package HW2;
 
 public class TestNineNine_HW2 {
 
