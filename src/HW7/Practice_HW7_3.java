@@ -19,6 +19,8 @@ public class Practice_HW7_3 {
             // 從來源檔案讀取資料並寫入目的地檔案
             while ((bytesRead = fis.read(buffer)) != -1) {
                 fos.write(buffer, 0, bytesRead);
+                // 將緩衝區中的數據強制寫入到文件中
+				fos.flush(); // 因為緩衝區的資料不一定裝滿，所以無法觸發送出，flush就是將其強制送出(確保其有送出)
             }
             System.out.println("檔案複製成功！");
         } catch (IOException e) {
