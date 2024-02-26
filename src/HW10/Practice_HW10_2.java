@@ -9,19 +9,24 @@ public class Practice_HW10_2 {
               (提示: TestFormatter.java, Java API 文件, 判斷數字可用正規表示法)
             • 補充 (依此類推): 輸入12345，千分位為12,345，輸入123，千分位為123
               輸入0.75，百分比為75%，輸入1，結果為100% */
-        Scanner sc = new Scanner(System.in);
+    	Scanner sc = new Scanner(System.in);
+    	double number = 0;
 
-        System.out.print("請輸入一個數字： ");
-        String input = sc.nextLine();
+    	while (true) {
+    	    System.out.print("請輸入一個數字： ");
+    	    String input = sc.nextLine();
 
-        // 檢查輸入是否為數字
-        if (!input.matches("-?\\d+(\\.\\d+)?")) {
-            System.out.println("數字格式不正確，請再輸入一次！");
-            return;
-        }
+    	    // 檢查輸入是否為數字
+    	    if (!input.matches("-?\\d+(\\.\\d+)?")) {
+    	        System.out.println("數字格式不正確，請再輸入一次！");
+    	        continue; // 回到循環頂部，提示用戶重新輸入
+    	    }
 
-        double number = Double.parseDouble(input);
+    	    number = Double.parseDouble(input);
+    	    break; // 跳出循環，表示輸入正確
+    	}
 
+    	// 進行後續操作，例如選擇格式化方式
         System.out.print("欲格式化成(1)千分位(2)百分位(3)科學記號：");
 
         int option = sc.nextInt();
